@@ -5,6 +5,7 @@ import './cart.css'
 import 'bootstrap/dist/css/bootstrap.css';
 
 const Cart = () => {
+    //useState
     const [data,setData]= useState([0])
     const [text,setText]= useState("Add to cart")
     const [text1,setText1]= useState("Add to cart")
@@ -20,7 +21,7 @@ const Cart = () => {
 useEffect(() => {
     console.log(data)
     }, [data]);
-
+//functions
 function count (){
     console.log(typeof data)
     if (text==="remove from cart"){
@@ -101,10 +102,11 @@ function count7 (){
     increaseData();
     } 
 }
-
+///increaseData function
 const increaseData = () => {
     setData(+ data + 1);
   };
+ ////decreaseData function
 const decreaseData = () => {
     if (data >0){
     setData(+ data - 1);

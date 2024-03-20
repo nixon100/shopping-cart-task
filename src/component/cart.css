@@ -127,9 +127,7 @@ a {
     border-radius: var(--bs-navbar-toggler-border-radius);
     transition: var(--bs-navbar-toggler-transition);
 }
-/* button, [type=button], [type=reset], [type=submit] {
-    -webkit-appearance: button;
-} */
+
 button, select {
     text-transform: none;
 }
