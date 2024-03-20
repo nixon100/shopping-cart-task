@@ -1,8 +1,117 @@
 import React from 'react'
+import { useState } from 'react';
+import { useEffect } from 'react';
 import './cart.css'
 import 'bootstrap/dist/css/bootstrap.css';
 
 const Cart = () => {
+    const [data,setData]= useState([0])
+    const [text,setText]= useState("Add to cart")
+    const [text1,setText1]= useState("Add to cart")
+    const [text2,setText2]= useState("Add to cart")
+    const [text3,setText3]= useState("Add to cart")
+    const [text4,setText4]= useState("Add to cart")
+    const [text5,setText5]= useState("Add to cart")
+    const [text6,setText6]= useState("Add to cart")
+    const [text7,setText7]= useState("Add to cart")
+
+
+
+useEffect(() => {
+    console.log(data)
+    }, [data]);
+
+function count (){
+    console.log(typeof data)
+    if (text==="remove from cart"){
+        decreaseData()
+        setText("Add to cart");
+    }else{
+    setText("remove from cart")
+    increaseData();
+    } 
+}
+function count1 (){
+    console.log(typeof data)
+    if (text1==="remove from cart"){
+        decreaseData()
+        setText1("Add to cart");
+    }else{
+    setText1("remove from cart")
+    increaseData();
+    } 
+}
+function count2 (){
+    console.log(typeof data)
+    if (text2==="remove from cart"){
+        decreaseData()
+        setText2("Add to cart");
+    }else{
+    setText2("remove from cart")
+    increaseData();
+    } 
+}
+function count3 (){
+    console.log(typeof data)
+    if (text3==="remove from cart"){
+        decreaseData()
+        setText3("Add to cart");
+    }else{
+    setText3("remove from cart")
+    increaseData();
+    } 
+}
+function count4 (){
+    console.log(typeof data)
+    if (text4==="remove from cart"){
+        decreaseData()
+        setText4("Add to cart");
+    }else{
+    setText4("remove from cart")
+    increaseData();
+    } 
+}
+function count5 (){
+    console.log(typeof data)
+    if (text5==="remove from cart"){
+        decreaseData()
+        setText5("Add to cart");
+    }else{
+    setText5("remove from cart")
+    increaseData();
+    } 
+}
+function count6 (){
+    console.log(typeof data)
+    if (text6==="remove from cart"){
+        decreaseData()
+        setText6("Add to cart");
+    }else{
+    setText6("remove from cart")
+    increaseData();
+    } 
+}
+function count7 (){
+    console.log(typeof data)
+    if (text7==="remove from cart"){
+        decreaseData()
+        setText7("Add to cart");
+    }else{
+    setText7("remove from cart")
+    increaseData();
+    } 
+}
+
+const increaseData = () => {
+    setData(+ data + 1);
+  };
+const decreaseData = () => {
+    if (data >0){
+    setData(+ data - 1);
+}
+  };
+
+
   return (
     <body>
  
@@ -28,7 +137,7 @@ const Cart = () => {
                         <button className="btn btn-outline-dark" type="submit">
                             <i className="bi-cart-fill me-1"></i>
                             Cart
-                            <span className="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                            <span className="badge bg-dark text-white ms-1 rounded-pill">{data}</span>
                         </button>
                     </form>
                 </div>
@@ -55,7 +164,9 @@ const Cart = () => {
                             </div>
                             
                             <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                                <div className="text-center">
+                                    <a className="btn btn-outline-dark mt-auto" href="#" onClick={count}>{text}</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -86,7 +197,7 @@ const Cart = () => {
                             </div>
                             
                             <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#" onClick={count1}>{text1}</a></div>
                             </div>
                         </div>
                     </div>
@@ -109,7 +220,7 @@ const Cart = () => {
                             </div>
                             
                             <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#" onClick={count2}>{text2}</a></div>
                             </div>
                         </div>
                     </div>
@@ -137,7 +248,7 @@ const Cart = () => {
                             </div>
                             
                             <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#" onClick={count3}>{text3}</a></div>
                             </div>
                         </div>
                     </div>
@@ -160,7 +271,7 @@ const Cart = () => {
                             </div>
                             
                             <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#" onClick={count4}>{text4}</a></div>
                             </div>
                         </div>
                     </div>
@@ -180,7 +291,7 @@ const Cart = () => {
                             </div>
                             
                             <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                                <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#" onClick={count5}>{text5}</a></div>
                             </div>
                         </div>
                     </div>
@@ -211,7 +322,7 @@ const Cart = () => {
                             </div>
                             
                             <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#" onClick={count6}>{text6}</a></div>
                             </div>
                         </div>
                     </div>
@@ -239,7 +350,7 @@ const Cart = () => {
                             </div>
                             
                             <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#" onClick={count7}>{text7}</a></div>
                             </div>
                         </div>
                     </div>
